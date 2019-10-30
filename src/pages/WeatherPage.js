@@ -1,18 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import TextLink from '../components/atoms/TextLink';
 import Forecast from '../components/organisms/Forecast';
 import PageTemplate from '../components/templates/PageTemplate';
-import { CURRENT_WEATHER, HOURLY_FORECAST } from '../data/mockWeather';
 
-const WeatherPage = () => {
+const WeatherPage = ({ city, temperature, changeCity, forecast, ...props }) => {
   return (
-    <PageTemplate
-      city={CURRENT_WEATHER.name}
-      temperature={CURRENT_WEATHER.main.temp}
-      changeCity={() => console.log('Change the city!')}
-    >
-      <Forecast forecast={HOURLY_FORECAST} />
-      <TextLink>Complain about the weather!</TextLink>
+    <PageTemplate city={city} temperature={temperature} changeCity={changeCity}>
+      <Forecast forecast={forecast} />;
+      <Link to="/complain">
+        <TextLink>Complain about the weather!</TextLink>
+      </Link>
     </PageTemplate>
   );
 };
