@@ -6,7 +6,7 @@ const HourlyWeather = ({ time, icon, maxTemp, ...props }) => {
     <li>
       <div>{time}</div>
       <WeatherIcon icon={icon} />
-      <div>{maxTemp}</div>
+      <div>{Math.round(maxTemp)} &deg;</div>
     </li>
   );
 };

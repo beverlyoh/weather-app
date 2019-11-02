@@ -8,7 +8,7 @@ const CurrentWeather = ({ city, temperature, onTextLinkClick, ...props }) => {
     <div>
       <CurrentCity city={city} />
       <TextLink onButtonClick={onTextLinkClick}>Change City</TextLink>
-      <CurrentTemperature temperature={temperature} />
+      <CurrentTemperature temperature={Math.round(temperature)}/>
     </div>
   );
 };
