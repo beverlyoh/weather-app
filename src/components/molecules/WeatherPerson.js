@@ -1,14 +1,16 @@
 import React from 'react';
-import Avatar from '../atoms/Avatar';
-import Profile from '../atoms/Profile';
+import WPName from '../atoms/WPName';
+import WPBio from '../atoms/WPBio';
+import WPAvatar from '../atoms/WPAvatar';
 
-const WeatherPerson = () => {
-  return (
-    <div>
-      <Avatar />
-      <Profile />
-    </div>
-  );
-};
+const WeatherPerson = ({firstname, lastname, bio, avatar, ...props}) => {
+    return (
+        <div>
+            <WPName firstname={firstname} lastname={lastname}/>
+            <WPBio  bio={bio}/>
+            <WPAvatar avatar={avatar}/>
+        </div>
+    )
+}
 
 export default WeatherPerson;

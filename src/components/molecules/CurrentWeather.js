@@ -1,16 +1,28 @@
 import React from 'react';
-import CurrentCity from '../atoms/CurrentCity';
-import CurrentTemperature from '../atoms/CurrentTemperature';
+import CityName from '../atoms/CurrentCity';
 import TextLink from '../atoms/TextLink';
+import CurrentTemperature from '../atoms/CurrentTemperature';
+// import RandoBox from '../atoms/RandoBox';
+import './CurrentWeather.css';
 
-const CurrentWeather = ({ city, temperature, onTextLinkClick, ...props }) => {
-  return (
-    <div>
-      <CurrentCity city={city} />
-      <TextLink onButtonClick={onTextLinkClick}>Change City</TextLink>
-      <CurrentTemperature temperature={Math.round(temperature)}/>
-    </div>
-  );
+const CurrentWeather = ({city, temperature, onTextLinkClick, linkType, ...props}) => {
+    return (
+        <>
+            <div class="cityimage" style={{ backgroundImage: `url(/static/${city}.jpg)`, 
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            }}>
+                <div class="currentweather">
+                    <CityName city={city}/>
+                    <TextLink linkType="changecitylink" onButtonClick={onTextLinkClick}>Change</TextLink>
+                    <CurrentTemperature temperature={temperature} />
+                    {/* <RandoBox /> */}
+                    <div class="color-divider"></div>
+                </div>
+            </div>
+        </>
+    );
 };
 
 export default CurrentWeather;

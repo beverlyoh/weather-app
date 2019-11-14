@@ -1,0 +1,12 @@
+.Button {
+    padding: 5px 20px;
+    text-align: center;
+    display: block;
+    background-color: #FF9900;
+     /* #eb64aa; */
+    font-family: adobe-clean, sans-serif;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+  }

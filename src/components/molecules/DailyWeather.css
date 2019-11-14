@@ -1,0 +1,26 @@
+.DWblock {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.DWtempblock {
+    display: flex;
+    justify-content: space-between;
+}
+
+.DWtitle {
+    font-size: 25pt;
+    margin: 0px;
+}
+
+.DWicon {
+    color: #e68a00;
+     /* #ED61AB;  #FF9900;*/
+    font-size: 40pt;
+    line-height: 20%;
+}
+
+.DWmaxmin {
+    font-size: 30pt;
+}
