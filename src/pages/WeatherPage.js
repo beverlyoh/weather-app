@@ -10,7 +10,6 @@ const WeatherPage = ({ city, temperature, changeCity, forecast, linkType, ...pro
     return (
       <PageTemplate city={city} temperature={temperature} changeCity={changeCity}>
         <Forecast forecast={forecast} />
-        <p class="complaintblurb">Don't like the weather?</p>
         <Link to="/complain">
           <TextLink linkType="complaintlink">Complain to the weather person!</TextLink>
         </Link>
